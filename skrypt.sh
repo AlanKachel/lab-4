@@ -20,7 +20,11 @@ elif [ "$1" = "--logs" ]; then
         echo "Nazwa skryptu: $0" >> "$filename"
         echo "Data utworzenia: $(date)" >> "$filename"
     done
-else
+elif [ "$1" = "--help" ]; then
     echo "Użycie: $0 --date"
-    echo "Użycie: $0 --logs <liczba_plików>"
+    echo "       $0 --logs <liczba_plików>"
+    echo "       $0 --help"
+else
+    echo "Nieznana opcja: $1"
+    echo "Użycie: $0 --help, aby uzyskać pomoc."
 fi
